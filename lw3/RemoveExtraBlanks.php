@@ -5,7 +5,7 @@ if ($text === null) {
 	echo "Параметр name не найден";
 } else {
 	
-	echo "Параметр name без пробелов:".foreach($word);
+	echo "Параметр name без пробелов:".foreach($text);
 } 
 $word = explode(" ", $text);
 $space = '';
