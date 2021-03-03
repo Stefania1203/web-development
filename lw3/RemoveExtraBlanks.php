@@ -4,7 +4,7 @@ $word = explode(" ", $text);
 $space = '';
 foreach ($word as $w)  /* цикл происходит перебор значений в массиве word */
 {
-  echo $space$w;
+  echo $space+$w;
   $space = ' ';
 }
 ?>
