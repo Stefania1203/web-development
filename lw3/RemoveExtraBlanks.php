@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: text/plain");
-$text = $_GET['text']; /* сохранили параметр text из GET в переменной */
-$word = explode(" ", $text);
+$book = $_GET['text']; /* сохранили параметр text из GET в переменной */
+$word = explode(" ", $book);
 $space = '';
 foreach ($word as $w)   /* цикл происходит перебор значений в массиве word */
 {
