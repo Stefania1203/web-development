@@ -1,8 +1,11 @@
 <?php
 header("Content-Type: text/plain");
 $text = $_GET['document']; /* сохранили параметр text из GET в переменной */
-if ($text !== null) {
+if ($text === null) {
 	echo "Параметр name не найден";
+} else {
+	
+	echo "Параметр name без пробелов:".foreach($word);
 } 
 $word = explode(" ", $text);
 $space = '';
