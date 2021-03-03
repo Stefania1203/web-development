@@ -15,5 +15,6 @@ function Remove(string $string) : string {
             echo $space.$w;
             $space = ' ';
          }
+	return $res;
  }	
 ?>
