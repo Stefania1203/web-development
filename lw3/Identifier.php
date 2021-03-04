@@ -5,7 +5,7 @@
   {
     /* с помощью цикла ищем первую не букву */
     for ($i = 0; $i < strlen($identifier); $i++){
-      if (!ctype_alpha($identifier[$i])) {
+      if (ctype_alpha($identifier[$i])) {
         break;
       }
     }
