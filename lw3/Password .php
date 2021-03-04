@@ -60,7 +60,7 @@
     $n = substr_count($pw, $pw[$i]);
     if ($n > 1) $safety -= $n;
   }
+  echo "Надежность пароля $safety";  
   }
 
-  echo $safety;
 ?>
