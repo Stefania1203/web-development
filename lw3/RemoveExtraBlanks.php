@@ -12,7 +12,7 @@ if ($text === null)
 else 
 {
     $text = trim($text);     /* удаление пробелов перед и после строки */
-    while( strpos($text,"  ") != false) /* 2 значения не равны входим в цикл */
+    while( strpos($text,"  ") === false) /* 2 значения не равны входим в цикл */
     {
         $text = str_replace("  ", " ", $text);
     }
