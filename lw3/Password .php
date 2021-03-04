@@ -1,6 +1,10 @@
 <?php
   header("Content-Type: text/plain");
   $pw = $_GET['password'];
+  if ($pw === null) {
+	echo "Параметр ".$password." не найден";
+} else {
+	
 
   /* начинаем с длинны */
   $n = strlen($pw);
@@ -57,6 +61,7 @@
   {
     $n = substr_count($pw, $pw[$i]);
     if ($n > 1) $safety -= $n;
+  }
   }
 
   echo $safety;
