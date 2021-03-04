@@ -8,4 +8,3 @@ header("Content-Type: text/plain");
             echo $space.$w;
             $space = ' ';
          }	
-?>
