@@ -1,32 +1,31 @@
 <?php
-  header("Content-Type: text/plain");
-  function getGETParametr(string $valueParameter): ?string
-  {
-   return isset($_GET[valueParameter]) ? (string) $_GET[$valueParameter] : null;
-  }	  
-  if (getGETParameter("password") === null)
-  {
-	echo "Параметр не найден";
-  } else
-  {
-  /* начинаем с длинны */
-  $n = strlen($pw);
-  $safety = 4 * $n;
-
-  /* считаем цифры */
-  $n = 0;
-  for ($i = 0; $i < strlen($pw); $i++)
-  {
-    if (ctype_digit($pw[$i])) $n++;
-  }
-  $safety += $n * 4;
-
-  /* считаем символы в верхнем регистре */
-  $n = 0;
-  for ($i = 0; $i <= strlen($pw); $i++)
-  {
+header("Content-Type: text/plain");
+function getGETParametr(string $valueParameter): ?string
+{
+    return isset($_GET[valueParameter]) ? (string) $_GET[$valueParameter] : null;
+}	  
+if (getGETParameter("password") === null)
+{
+   echo "Параметр не найден";
+} 
+else
+{
+    /* начинаем с длинны */
+    $n = strlen($pw);
+    $safety = 4 * $n;
+    /* считаем цифры */
+    $n = 0;
+    for ($i = 0; $i < strlen($pw); $i++)
+    {
+        if (ctype_digit($pw[$i])) $n++;
+    }
+    $safety += $n * 4;
+   /* считаем символы в верхнем регистре */
+    $n = 0;
+    for ($i = 0; $i <= strlen($pw); $i++)
+   {
     if (ctype_upper($pw[$i])) $n++;
-  }
+   }
   $safety += (strlen($pw) - $n) * 2;
 
   /* считаем символы в нижнем регистре */
