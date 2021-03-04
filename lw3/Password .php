@@ -2,10 +2,8 @@
   header("Content-Type: text/plain");
   $pw = $_GET['password'];
   if ($pw === null) {
-	echo "Параметр ".$password." не найден";
+	echo "Параметр не найден";
 } else {
-	
-
   /* начинаем с длинны */
   $n = strlen($pw);
   $safety = 4 * $n;
