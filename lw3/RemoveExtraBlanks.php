@@ -1,5 +1,5 @@
 <?php
-header("Content-Type: text/plain");
+
 $text = $_GET['document']; /* сохранили параметр text из GET в переменной */
          $word = explode(" ", $text);
          $space = '';
