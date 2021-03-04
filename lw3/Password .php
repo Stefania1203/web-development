@@ -1,9 +1,14 @@
 <?php
   header("Content-Type: text/plain");
-  $pw = $_GET['password'];
-  if ($pw === null) {
+  function getGETParametr(string $valueParameter): ?string
+  {
+   return isset($_GET[valueParameter]) ? (string) $_GET[$valueParameter] : null;
+  }	  
+  if (getGETParameter("password") === null)
+  {
 	echo "Параметр не найден";
-} else {
+  } else
+  {
   /* начинаем с длинны */
   $n = strlen($pw);
   $safety = 4 * $n;
@@ -18,7 +23,7 @@
 
   /* считаем символы в верхнем регистре */
   $n = 0;
-  for ($i = 0; $i < strlen($pw); $i++)
+  for ($i = 0; $i <= strlen($pw); $i++)
   {
     if (ctype_upper($pw[$i])) $n++;
   }
@@ -26,7 +31,7 @@
 
   /* считаем символы в нижнем регистре */
   $n = 0;
-  for ($i = 0; $i < strlen($pw); $i++)
+  for ($i = 0; $i <= strlen($pw); $i++)
   {
     if (ctype_lower($pw[$i])) $n++;
   }
