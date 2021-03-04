@@ -1,6 +1,13 @@
 <?php
   header("Content-Type: text/plain");
-  $identifier = $_GET['identifier'];
+
+function getGETParametr(string $valueParameter): ?string
+  {
+   return isset($_GET[valueParameter]) ? (string) $_GET[$valueParameter] : null;
+  }	  
+
+  $identifier = getGETParametr("identofier");
+
   if (ctype_alpha($identifier[0])) /* если первая буква */ 
   {
     /* с помощью цикла ищем первую не букву */
