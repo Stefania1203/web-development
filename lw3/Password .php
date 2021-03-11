@@ -1,12 +1,13 @@
 <?php
 header("Content-Type: text/plain");
-function getGETParametr(string $valueParameter): ?string
+function getGETParameter(string $valueParameter): ?string
 {
-    return isset($_GET[valueParameter]) ? (string) $_GET[$valueParameter] : null;
+    return isset($_GET[$valueParameter]) ? (string) $_GET[$valueParameter] : null;
 }	  
-if (getGETParameter("password") === null)
+$pw = getGETParameter("password");
+if ($pw === null)
 {
-   echo "Параметр не найден";
+    echo "Параметр не найден";
 } 
 else
 {
@@ -20,51 +21,47 @@ else
         if (ctype_digit($pw[$i])) $n++;
     }
     $safety += $n * 4;
-   /* считаем символы в верхнем регистре */
+    /* считаем символы в верхнем регистре */
     $n = 0;
-    for ($i = 0; $i <= strlen($pw); $i++)
-   {
-    if (ctype_upper($pw[$i])) $n++;
-   }
-  $safety += (strlen($pw) - $n) * 2;
+    for ($i = 0; $i < strlen($pw); $i++)
+    {
+        if (ctype_upper($pw[$i])) $n++;
+    }
+    $safety += (strlen($pw) - $n) * 2;
 
-  /* считаем символы в нижнем регистре */
-  $n = 0;
-  for ($i = 0; $i <= strlen($pw); $i++)
-  {
-    if (ctype_lower($pw[$i])) $n++;
+    /* считаем символы в нижнем регистре */
+    $n = 0;
+    for ($i = 0; $i < strlen($pw); $i++)
+    {
+        if (ctype_lower($pw[$i])) $n++;
+    }
+    $safety += (strlen($pw) - $n) * 2;
+    /* снова считаем цифры */
+    $n = 0;
+    for ($i = 0; $i < strlen($pw); $i++)
+    {
+        if (ctype_digit($pw[$i])) $n++;
+    }
+    if ($n == strlen($pw)) /* если пароль состоит только из цифр */
+    {
+        $safety -= strlen($pw);
+    }
+    /* считаем буквы */
+    $n = 0;
+    for ($i = 0; $i < strlen($pw); $i++)
+    {
+        if (ctype_alpha($pw[$i])) $n++;
+    }
+    if ($n == strlen($pw)) /* если пароль состоит только из букв */
+    {
+        $safety -= strlen($pw);
+    }
+    /* повторяющиеся символы */
+    for ($i = 0; $i < strlen($pw); $i++)
+    {
+        $n = substr_count($pw, $pw[$i]);
+        if ($n > 1) $safety -= $n;
+    }
+    echo "Надежность пароля $safety";  
   }
-  $safety += (strlen($pw) - $n) * 2;
-
-  /* снова считаем цифры */
-  $n = 0;
-  for ($i = 0; $i < strlen($pw); $i++)
-  {
-    if (ctype_digit($pw[$i])) $n++;
-  }
-  if ($n == strlen($pw)) /* если пароль состоит только из цифр */
-  {
-    $safety -= strlen($pw);
-  }
-
-  /* считаем буквы */
-  $n = 0;
-  for ($i = 0; $i < strlen($pw); $i++)
-  {
-    if (ctype_alpha($pw[$i])) $n++;
-  }
-  if ($n == strlen($pw)) /* если пароль состоит только из букв */
-  {
-    $safety -= strlen($pw);
-  }
-
-  /* повторяющиеся символы */
-  for ($i = 0; $i < strlen($pw); $i++)
-  {
-    $n = substr_count($pw, $pw[$i]);
-    if ($n > 1) $safety -= $n;
-  }
-  echo "Надежность пароля $safety";  
-  }
-
 ?>
