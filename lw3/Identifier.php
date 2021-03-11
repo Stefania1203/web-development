@@ -1,16 +1,16 @@
 <?php
 header("Content-Type: text/plain");
-function getGETParametr(string $valueParameter): ?string
+function getGETParameter(string $valueParameter): ?string
 {
-    return isset($_GET[valueParameter]) ? (string) $_GET[$valueParameter] : null;
+    return isset($_GET[$valueParameter]) ? (string) $_GET[$valueParameter] : null;
 }	  
-$identifier = getGETParametr("identofier");
+$identifier = getGETParameter("identifier");
 if (ctype_alpha($identifier[0])) /* если первая буква */ 
 {
      /* с помощью цикла ищем первую не букву */
      for ($i = 0; $i < strlen($identifier); $i++)
      {
-         if (ctype_alpha($identifier[$i])) 
+         if (!ctype_alpha($identifier[$i])) 
          {
              break;
          }
@@ -33,6 +33,9 @@ if (ctype_alpha($identifier[0])) /* если первая буква */
      }
 }
 else
+{
+    echo 'no';
+}
 {
     echo 'no';
 }
