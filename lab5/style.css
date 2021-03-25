@@ -1,0 +1,152 @@
+.about
+{
+    margin: 0px auto;
+    width: 1000px;
+
+}
+
+.about__photoquote
+{
+    margin: 100px 0px 50px 0px;
+    height: 350px;    
+}
+
+.photo
+{
+    float: left;    
+}
+
+.images
+{
+    border-radius: 5px;
+    width: 330px;
+    height: 350px;
+    overflow: hidden;
+    object-fit: none ;
+}
+
+.utterance
+{
+    margin-left: 390px;
+    padding-top: 50px;
+}
+
+.transparency_quotes
+{
+    opacity: 0.5;
+    margin: 0 0 -20px 0;
+}
+
+.quote
+{
+
+    width: 450px;
+    color: #848484;
+    font: italic 28px/42px Georgia, serif;
+    margin: 0px 65px -25px 60px;
+
+}
+ 
+
+.quote__author
+{
+    font: 600 16px/42px "Open Sans", sans-serif;
+    color: #333333;
+    padding-left: 60px; 
+}
+
+
+.about__likeit
+{
+    margin: 0 0 100px 0;
+}
+.likeit
+{
+    clear: left;
+}
+
+.authorfilm
+{
+    
+    float: left;
+}
+
+.favorites
+{
+    margin-bottom: 38px;
+}
+
+.favorites__title
+{
+    margin: 0 0 12px 0;
+    font: 600 24px/32px "Open Sans", sans-serif;
+    color: #15a98c;
+}
+
+.favorites__list
+{
+    font: 19px/36px Georgia, serif;
+    color: #555555;
+    margin: 0;
+    padding: 0 0 0 22px;
+
+}
+
+.about__personality
+{
+    margin: 0;
+}
+
+.persona
+{
+    margin-left: 390px;
+    margin-top: 0px;
+}
+
+.name
+{
+    font: 700 48px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 0 0 80px 3px;
+}
+
+.name::after
+{
+    display: inline-block;
+    content: '';
+    height: 6px;
+    width: 60px;
+    border-radius: 3px;
+    background-color: #45c3aa;
+    position: relative;
+    top: 40px;
+    left: -228px;
+}
+
+
+.biography
+{
+    font: 19px/32px Georgia, serif;
+    color: #555555;
+    margin: 8px 40px 42px 0;
+}
+
+.title_hobby
+{
+    font: 400 36px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 0 0 17px -3px;
+}
+.hobby
+{
+    font: 19px/32px Georgia, serif;
+    color: #555555;
+    margin: 0 50px 41px 0;
+}
+
+.write_me
+{
+    font: 19px/32px Georgia, serif;
+    color: #098d72;
+}
+ 
