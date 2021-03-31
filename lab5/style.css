@@ -25,9 +25,11 @@
 
 .images
 {
+    
     position: relative;
     top: -75px;
-    left: -195px;  
+    left: -195px;
+    
 }
 
 .utterance
@@ -150,3 +152,4 @@
     font: 19px/32px Georgia, serif;
     color: #098d72;
 }
+ 
