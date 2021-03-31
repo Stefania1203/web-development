@@ -2,49 +2,49 @@
 {
     margin: 0px auto;
     width: 1000px;
-
 }
 
 .about__photoquote
 {
-    margin: 100px 0px 50px 0px;
+    margin: 100px 0px 51px 0px;
     height: 350px;    
+}
+
+.about__photo
+{
+    width: 330px;
+    height: 350px;
 }
 
 .photo
 {
-    float: left;    
+    float: left; 
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 .images
 {
-    border-radius: 5px;
-    width: 330px;
-    height: 350px;
-    overflow: hidden;
-    object-fit: none ;
+    position: relative;
+    top: -75px;
+    left: -195px;  
 }
 
 .utterance
 {
     margin-left: 390px;
-    padding-top: 50px;
-}
-
-.transparency_quotes
-{
-    opacity: 0.5;
-    margin: 0 0 -20px 0;
+    padding-top: 117px;    
+    background-image: url(../images/quotes.png);
+    background-repeat: no-repeat;
+    background-position: 0px 47px;
 }
 
 .quote
 {
-
     width: 450px;
     color: #848484;
     font: italic 28px/42px Georgia, serif;
-    margin: 0px 65px -25px 60px;
-
+    margin: 2px 62px -24px 60px;
 }
  
 
@@ -52,33 +52,28 @@
 {
     font: 600 16px/42px "Open Sans", sans-serif;
     color: #333333;
-    padding-left: 60px; 
+    padding-left: 64px; 
+    margin-top: 27px;
 }
 
-
-.about__likeit
-{
-    margin: 0 0 100px 0;
-}
 .likeit
 {
     clear: left;
 }
 
 .authorfilm
-{
-    
+{    
     float: left;
 }
 
 .favorites
 {
-    margin-bottom: 38px;
+    margin-bottom: 40px;
 }
 
 .favorites__title
 {
-    margin: 0 0 12px 0;
+    margin: 4px 0px 12px 0px;
     font: 600 24px/32px "Open Sans", sans-serif;
     color: #15a98c;
 }
@@ -88,8 +83,7 @@
     font: 19px/36px Georgia, serif;
     color: #555555;
     margin: 0;
-    padding: 0 0 0 22px;
-
+    padding: 0px 0px 0px 21px;
 }
 
 .about__personality
@@ -107,7 +101,8 @@
 {
     font: 700 48px/42px "Open Sans", sans-serif;
     color: #333333;
-    margin: 0 0 80px 3px;
+    margin: -9px 0px 81px 4px;
+    padding-top: 4px;
 }
 
 .name::after
@@ -119,8 +114,8 @@
     border-radius: 3px;
     background-color: #45c3aa;
     position: relative;
-    top: 40px;
-    left: -228px;
+    top: 39px;
+    left: -215px;
 }
 
 
@@ -128,25 +123,30 @@
 {
     font: 19px/32px Georgia, serif;
     color: #555555;
-    margin: 8px 40px 42px 0;
+    margin: 8px 40px 41px 0;
 }
 
 .title_hobby
 {
     font: 400 36px/42px "Open Sans", sans-serif;
     color: #333333;
-    margin: 0 0 17px -3px;
+    margin: 0px 0px 16px -1px;
 }
 .hobby
 {
     font: 19px/32px Georgia, serif;
     color: #555555;
-    margin: 0 50px 41px 0;
+    margin: 5px 50px 40px -1px;
 }
 
 .write_me
 {
     font: 19px/32px Georgia, serif;
+    color: #098d72; 
+}
+
+.write_me__link
+{
+    font: 19px/32px Georgia, serif;
     color: #098d72;
 }
- 
