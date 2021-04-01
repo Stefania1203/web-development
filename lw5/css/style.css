@@ -1,1 +1,178 @@
+.about
+{
+    margin: 0 auto;
+    width: 1000px;
+}
 
+.about__photo-quote
+{
+    margin: 100px 0px 0px 0px;
+    height: 347px;
+}
+
+.about__photo
+{
+    width: 330px;
+    height: 350px;
+    float: left; 
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.photos__photo
+{   
+    position: relative;
+    top: -75px;
+    left: -195px;  
+}
+
+.utterance
+{
+    margin-left: 390px;
+    padding-top: 117px;    
+    background-image: url(../images/quotes.png);
+    background-repeat: no-repeat;
+    background-position: 0px 50px;
+}
+
+.quote
+{
+    width: 450px;
+    color: #848484;
+    font: italic 28px/42px Georgia, serif;
+}
+
+.about__quote
+{
+    margin: 3px 0px 0px 60px;
+}
+
+.about__author
+{
+    font: 600 16px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 2px 0 0 62px;
+}
+
+.about__like-it
+{
+   margin: 0;
+   clear: both;
+}
+
+.favorites
+{
+    width: 330px;   
+    float: left;
+}
+
+.author
+{
+    margin-bottom: 42px;
+}
+
+.author__title
+{
+    margin: 0 0 12px 0;
+    font: 600 24px/32px "Open Sans", sans-serif;
+    color: #15a98c;
+}
+
+.films
+{
+    margin-bottom: 42px;
+}
+
+.films__title
+{
+    margin: 0 0 12px 0;
+    font: 600 24px/32px "Open Sans", sans-serif;
+    color: #15a98c;
+}
+
+.films__list-item
+{
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.author__list-item
+{
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.list-item
+{
+    font: 19px/36px Georgia, serif;
+    color: #555555;
+}
+
+.list-item__posituin_s
+{
+    margin: 0px 0px 0px -3px;
+}
+
+.like-it__personality
+{
+    margin-left: 390px;
+}
+
+.persona__name
+{
+    font: 700 48px/42px "Open Sans", sans-serif;
+    color: #333333;
+    padding: 0 0 0 3px;
+}
+
+.persona__name::after
+{
+    display: inline-block;
+    content: '';
+    height: 6px;
+    width: 60px;
+    border-radius: 3px;
+    background-color: #45c3aa;
+    position: relative;
+    top: 40px;
+    left: -215px;
+}
+
+.persona__biography
+{
+    font: 19px/32px Georgia, serif;
+    color: #555555;
+    margin: 0;
+    padding: 34px 0px 0px 0px;
+}
+
+.my-hobby 
+{
+   margin: 0; 
+}
+
+.my-hobby__title-hobby
+{
+    font: 400 36px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 41px 0px 0px -3px;
+}
+
+.my-hobby__hobby
+{
+    font: 19px/32px Georgia, serif;
+    color: #555555;
+    margin: 16px 36px 40px 0; 
+}
+
+.write_me
+{
+    font: 19px/32px Georgia, serif;
+    color: #098d72; 
+}
+
+.write_me__link
+{
+    font: 19px/32px Georgia, serif;
+    color: #098d72;
+}
